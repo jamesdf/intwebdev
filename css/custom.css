@@ -1,0 +1,383 @@
+/* html styling*/
+
+body {font-family: Arial, Helvetica, sans-serif;
+
+  padding: 20px 0 20px 0;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #006DCC;
+  font-size: 100%;}
+  	
+#bgwrap {
+  background: #ffffff;
+  padding: 40px 40px 40px 40px;}
+
+/*Make search and custom phone number module flush on right side */
+.search,
+.custom {
+  float:right;
+}
+
+
+/*4/22/14 make fixed height for header - add more white space */
+header {
+  min-height: 60px;
+}
+
+
+}
+/*nav bar coloring copied from bootstrap */
+.navbar-fixed-top;
+.navbar-right;
+.navbar {
+  margin-bottom: 1px;
+}
+.navbar-inner {
+  min-height: 40px;
+  padding-right: 20px;
+  padding-left: 2px;
+  background-color: #ffffff; /* this colors the main menu bar - plus browser compatibles below */
+  background-image: -moz-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ffffff));
+  background-image: -webkit-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -o-linear-gradient(top, #ffffff, #ffffff);
+  background-image: linear-gradient(to bottom, #ffffff, #ffffff);
+  background-repeat: repeat-x;
+  border-top: 2px solid #c6c6c6;
+  border-bottom: 2px solid #c6c6c6;
+  border-left: 0px solid #c6c6c6;
+  border-right: 0px solid #c6c6c6;
+  
+  -webkit-border-radius: 0px;
+     -moz-border-radius: 0px;
+          border-radius: 0px;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffffffff', GradientType=0);
+  *zoom: 1;
+  -webkit-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.065);
+     -moz-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.065);
+          box-shadow: 0 1px 0px rgba(0, 0, 0, 0.065);
+}
+
+/* nav bar text styling */
+.navbar .nav > li > a {
+  font-size: 16px; /* 4/2/14 Don't know what this changes!!! */	
+  color: #3399FF; /* Text color of main menu items */
+  text-decoration: none;
+  text-shadow: none;
+}
+/*When you mouse over main menu items */
+
+.navbar .nav > li > a:focus,
+.navbar .nav > li > a:hover {
+  color: #00009c;
+  text-decoration: none;
+  background-color:  #fff; /*#C6C6C6 transparency ;*/
+}
+/*box around menu item */
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+  color: #ffffff;   /* text color of muosed over item*/
+  text-decoration: none;
+  background-color: #00009C; /* background color of currently viewed item*/
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+}
+
+/*nav bar drop down taken from protostar - 2nd level menu*/
+
+nav .nav-child {
+	position: absolute;
+	top: 95%;
+	left: 0;
+	z-index: 1000;
+	display: none;
+	float: left;
+	min-width: 160px;
+	padding: 5px 0;
+	margin: 2px 0 0;
+	list-style: none;
+/*	background-color: #DBD9D9;  background color of submenu bubble*/
+  	background-color: #ffffff; /* background color of submenu bubble*/
+	border: 1px solid #ccc;
+	border: 1px solid rgba(0,0,0,0.2);
+	*border-right-width: 2px;
+	*border-bottom-width: 2px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+}
+nav .nav-child.pull-right {
+	right: 0;
+	left: auto;
+}
+nav .nav-child .divider {
+	*width: 100%;
+	height: 1px;
+	margin: 8px 1px;
+	*margin: -5px 0 5px;
+	overflow: hidden;
+	background-color: #0000ff /* JDF #e5e5e5 */;
+	border-bottom: 1px solid #fff;
+}
+/*2nd level menu items */
+nav .nav-child a {
+	display: block;
+	padding: 3px 20px;
+	clear: both;
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 18px;
+	color: #3399FF /* xcvb JDF transparent */; /* color of submenu text*/
+    background-color: #fff;
+	white-space: nowrap;
+}
+
+
+/*box around sub menu item */
+nav .nav-child > .active > a,
+nav .nav-child > .active > a:hover,
+nav .nav-child  > .active > a:focus {
+  color: #ffffff;   /* text color of muosed over item*/
+  text-decoration: none;
+  background-color: #00009C; /* background color of currently viewed item*/
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+}
+
+
+
+nav .nav > li {
+	position: relative;
+}
+nav .nav > li:hover > .nav-child,
+nav .nav > li > a:focus + .nav-child {
+	display: block;
+}
+nav .nav-child:before {
+	position: absolute;
+	top: -7px;
+	left: 9px;
+	display: inline-block;
+	border-right: 7px solid transparent;
+	border-bottom: 7px solid #0000ff;
+	border-left: 7px solid transparent;
+	border-bottom-color: rgba(0,0,0,0.2);
+	content: '';
+}
+/*Is this the border on the submenu? the little triangle? */
+nav .nav-child:after {
+	position: absolute;
+	top: -6px;
+	left: 10px;
+	display: inline-block;
+	border-right: 6px solid transparent;
+	border-bottom: 6px solid #DBD9D9; /* 4/2/14 #ff6c00; */
+	border-left: 6px solid transparent;
+	content: '';
+}
+nav .nav-child li > a:hover,
+nav .nav-child li > a:focus,
+nav .nav-child:hover > a {
+	text-decoration: none;
+	color: #00009C; /* 4/2/14 #ff6c00; *//*color of submenu text when hovered over with mouse*/
+	background-color: #fff; /*transparent;*/}
+
+nav .nav menu nav-pills {
+  background-color: #3399ff;
+  color: #fff;
+ /* background-color: #ffffff; 
+  color: #00009c; */
+}
+
+/* 3rl level menu in notepad */
+/* Styling breadcrumbs */
+.breadcrumb {
+    background-color: #ffffff;
+    border-radius: 0;
+    list-style: none outside none;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+/*styling footer 8/22/14 jlh*/
+footer {
+  color: #00009C;
+  border-top: 2px solid #c6c6c6;
+  margin-top: 40px;
+  
+}
+
+footer > p {
+  margin: 20px 0 0 0;
+}
+
+
+blockquote {
+    border-left: 7px solid #00009C;
+  background-color: #dbf1f8;
+	padding: 2px, 2px, 2px, 7px
+
+}
+
+/* 3/14/14 trying to indent children of vertical menu */
+ul.unstyled,
+ol.unstyled {
+  margin-left: 20px;
+  list-style: none;
+  color: #ff0000 /* 3/14/14 */;
+}
+/* 3/18/14 Use our own class (inth3) to change h3 color to #0088CC */
+
+h3.inth3 {
+  color: #0088CC
+}
+span.int {
+	font-style: italic;
+}
+/* 4/18/14 For highlighting items to change */
+h4.inth4hl {
+  color: #FF0000;
+  font-style: italic;
+}
+/*8 4/24/14 Make all INT headings a nice color blue... */
+h1, h2, h3, h4, h5, h6, h7 {
+  color: #0088CC;
+}
+/* 12/10/14 make h1 be smaller! */
+h1 {font-size: 24.5px;
+}
+/* 12/11/14 may need to change h3, h4, etc. too. */
+h2 {
+  line-height: 20px;
+}
+/*allow for accordian headings to have h2 structure with our own formatting 12/11/14 */
+div.accordion-heading > h2 > a {
+  font-size: 18px;
+
+}
+div.accordion-heading > h2 {
+    margin: 0;
+    padding: 2.5px 0;
+}
+/*might be messing us up - tried to get rid of extra spacing*/
+
+/* 4/2/14 Add media for 979px and less */
+
+@media (max-width: 979px) {
+    /*nav bar drop down taken from protostar*/
+    
+    nav .nav-child {
+        position: static;
+        top: auto;
+        left: auto;
+        z-index: 1000;
+        display: block;
+        float: none;
+        min-width: 160px;
+        padding: 5px 0;
+        margin: 2px 0 0;
+        list-style: none;
+        background-color: #fff; /*transparent;*/
+        border: 0px solid #ccc;
+        border: 0px solid rgba(0,0,0,0.2);
+        *border-right-width: 0px;
+        *border-bottom-width: 0px;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        border-radius: 0px;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        background-clip: padding-box;
+    }
+    
+    
+      
+    nav ul.nav-child a {
+        font-size: 16px;
+      }
+    
+    .navbar .nav > li > a:focus,
+    .navbar .nav > li > a:hover {
+     background-color: transparent ;
+     color: #00009c;
+    }  
+    
+    nav .nav-child:before,
+      .nav-child:after {
+        display: none;
+      }
+    /* 4/7/14 Start change for sub sub item.. */
+    nav ul.nav-child ul.nav-child a {
+        padding: 0 0 0 30px;
+        color: 3399ff;
+    }
+    nav ul.nav-child ul.nav-child ul.nav-child a {
+        padding: 0 0 0 40px;
+    }
+    /*  4/7/14 end change for sub sub item */  
+} /* end of media for 979px */
+
+
+    .contact h3 {display: none;}		/* 4/9/14 on contact page removes empty headers at top*/
+    
+    /* 4/21/14 jlh custom testimonial banner formatting */ 
+    div.customtbanner {
+      color: #00009c;
+      Font-size: 1.5em;
+      text-align: center;
+ }
+	/* 8/28/14  JLH. Fixed cutting off letter decenders on last line of carousel. Built in bs carousel code set to 1.0.  Adjusted to 1.25 to see decenders and not add too much spacing for word wrapped text items. Also removed bottom margin on carousel b/c it made text not vertically centered*/
+	
+	.carousel {
+	  line-height: 1.25;
+	  margin-bottom: 0;
+	}
+
+		  /*8/28/14 jlh  @media for phone size to: change graphic, remove carousel banner, remove extra "padding/margin" from site */
+		/* Landscape phones and down */
+@media (max-width: 480px) { 
+	body{
+		max-width: 95%;
+	}  
+    
+	#bgwrap {
+		padding: 5px;
+	}  
+    
+	.navbar-inner {
+        	padding-left: 5px;
+	        padding-right: 5px;
+	}    
+    
+      div.customtbanner {
+      display: none;
+      }
+
+       .well {
+        display: none;
+      }
+}  /*end media  max 480 */
+
+/* 4/22/14 item-page is styled differently trying to adjust */
+div.item-page{
+  padding: 0 0 0 0;
+  margin: 0 0 0 0 ;
+  }
+
+/* 4/24/14  Change read-more accoridan / slider heading font size*/
+ div.panel h3 a { font-size: .85em }
+
+}
+
